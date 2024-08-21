@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,14 +15,66 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-manrope{
+        .font-manrope {
             font-family: "Manrope", sans-serif;
         }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'hockey-red-base': '#FF4240',
+                        'hockey-black-base': '#131318'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body class="font-manrope">
-    <header></header>
+    <header class="container mx-auto">
+        <!-- navbar starts -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li class="text-hockey-red-base"><a>Home</a></li>
+                        <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>About</a></li>
+                        <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Pages</a></li>
+                        <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Blog</a></li>
+                        <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-2xl md:text-4xl text-hockey-black-base font-extrabold">Hockey<span class="text-hockey-red-base">'</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li class="text-hockey-red-base"><a>Home</a></li>
+                    <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>About</a></li>
+                    <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Pages</a></li>
+                    <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Blog</a></li>
+                    <li class="text-[#424247] hover:text-hockey-red-base duration-300 ease-in-out"><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end flex space-x-6">
+                <h3 class="hidden lg:block"><i class="fa-solid fa-magnifying-glass w-[14px] h-[14px] text-[#89898B]"></i></h3>
+                <a class="bg-hockey-red-base text-white md:text-xl font-bold px-3 py-2 md:px-5 md:py-3 rounded-lg ml-5">Get Ticket</a>
+            </div>
+        </div>
+    </header>
     <main></main>
     <footer></footer>
 </body>
+
 </html>
